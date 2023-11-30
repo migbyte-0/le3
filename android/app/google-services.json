@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "885376977787",
+    "project_id": "leee3-922c1",
+    "storage_bucket": "leee3-922c1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885376977787:android:65db5173c981a996ff4bde",
+        "android_client_info": {
+          "package_name": "com.example.leee3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkHya4krQZjV0KlEI03T_sWet9OBbcgII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
