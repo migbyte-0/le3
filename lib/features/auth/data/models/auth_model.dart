@@ -1,25 +1,23 @@
 import 'package:leee3/features/auth/domain/entities/auth_entities.dart';
 
 class AuthModel extends Auth {
-  AuthModel({
-    required String id,
-    required String phoneNumber,
-    required String name,
-  }) : super(id: id, phoneNumber: phoneNumber, name: name);
+  const AuthModel({
+    required super.id,
+    required super.name,
+    required super.email,
+    required super.phoneNumber,
+  });
 
   factory AuthModel.fromJson(Map<String, dynamic> json) {
     return AuthModel(
       id: json['id'],
-      phoneNumber: json['phoneNumber'],
       name: json['name'],
+      email: json['email'],
+      phoneNumber: json['phoneNumber'],
     );
   }
 
   Map<String, dynamic> toJson() {
-    return {
-      'id': id,
-      'phoneNumber': phoneNumber,
-      'name': name,
-    };
+    return {'id': id, 'name': name, 'email': email, 'phoneNumber': phoneNumber};
   }
 }

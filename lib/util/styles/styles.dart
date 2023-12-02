@@ -17,9 +17,9 @@ abstract class Styles {
     height: 0,
   );
 
-  static const TextStyle styleBold18 = TextStyle(
-    color: Colors.black,
-    fontSize: 18,
+  static const TextStyle styleBoldOrange16 = TextStyle(
+    color: Colors.deepOrange,
+    fontSize: 16,
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
     height: 0,

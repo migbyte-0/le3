@@ -7,7 +7,7 @@ class LowerWaveClipper extends CustomClipper<Path> {
 
     // Adjustments to make the wave smaller
     path.lineTo(0,
-        size.height - 10); // Start the path closer to the top of the container
+        size.height - 5); // Start the path closer to the top of the container
 
     // Smaller wave control points and end points
     path.quadraticBezierTo(

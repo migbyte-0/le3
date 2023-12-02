@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../util/widgets/decorators/index.dart';
-import '../../../../util/widgets/decorators/lower_wave_clipper.dart';
+import '../../../../util/widgets/decorators/middle_wave_clipper.dart';
 import '../bloc/exports.dart';
 import '../widgets/index.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SigninScreen extends StatelessWidget {
+  const SigninScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,13 @@ class LoginScreen extends StatelessWidget {
                     children: [
                       const Center(child: LoginAvatar()),
                       const SizedBox(height: 30),
-                      LoginForm(authBloc: authBloc),
+                      const SigninWithPhoneWidget(),
+                      const SizedBox(height: 20),
+                      GoogleSignInButton(
+                        onPressed: () {
+                          authBloc.add(SignInWithGoogleEvent());
+                        },
+                      ),
                     ],
                   )),
                 ),
@@ -57,9 +63,9 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
                 ClipPath(
-                  clipper: LowerWaveClipper(),
+                  clipper: MiddleWaveClipper(),
                   child: const GradientContainer(
-                    myHeight: 200,
+                    myHeight: 190,
                     firstGradientColor: Color.fromARGB(255, 148, 67, 0),
                     secondGradientColor: Color.fromARGB(255, 84, 42, 6),
                   ),
@@ -70,6 +76,14 @@ class LoginScreen extends StatelessWidget {
                     myHeight: 150,
                     firstGradientColor: Color.fromARGB(255, 103, 47, 10),
                     secondGradientColor: Color.fromARGB(255, 41, 17, 2),
+                  ),
+                ),
+                ClipPath(
+                  clipper: UpperWaveClipper(),
+                  child: const GradientContainer(
+                    myHeight: 100,
+                    firstGradientColor: Color.fromARGB(255, 202, 99, 30),
+                    secondGradientColor: Color.fromARGB(255, 124, 55, 12),
                   ),
                 )
               ],
